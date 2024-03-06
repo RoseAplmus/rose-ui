@@ -7,7 +7,12 @@
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "cache": false,
+      "outputs": []
+    },
+    "lint:fix": {
+      "cache": false,
+      "outputs": []
     },
     "dev": {
       "cache": false,
