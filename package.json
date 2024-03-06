@@ -10,16 +10,28 @@
     "lint:fix": "turbo lint -- --fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "pnpm -r exec rimraf node_modules",
-    "clean:all": "pnpm -r exec rimraf node_modules .turbo"
+    "clean:all": "pnpm -r exec rimraf node_modules .turbo",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.0.3",
+    "@commitlint/config-conventional": "^19.0.3",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.9.0",
   "engines": {
     "node": ">=18.17.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "prettier --write .",
+      "eslint  --fix"
+    ],
+    "*.{json,less,md}": "prettier --write"
   }
 }
