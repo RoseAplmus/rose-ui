@@ -2,6 +2,6 @@
 const antfu = require('@antfu/eslint-config').default
 
 module.exports = antfu({
-    react: true,
-    unocss: true,
+	react: true,
+	unocss: true,
 })
