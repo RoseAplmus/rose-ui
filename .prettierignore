@@ -11,6 +11,7 @@
 .output.js
 
 LICENSE
+index.html
 
 /dist/*
 /build/*
